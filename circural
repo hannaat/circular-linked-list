@@ -4,7 +4,6 @@
 struct SNode{
 	int data;
 	struct SNode *Next;
-	
 };
 
 struct Snode *n_awal,
@@ -14,7 +13,6 @@ struct Snode *n_awal,
 int iterasi 
 
 void inisialisasi(){
-
 
 		n_awal = NULL;
 }
