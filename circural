@@ -1,0 +1,89 @@
+#include(stdio.h)
+#include(stdlib.h)
+
+struct SNode{
+	int data;
+	struct SNode *Next;
+	
+};
+
+struct Snode *n_awal,
+*n_tampil,
+*n_bantu;
+
+int iterasi 
+
+void inisialisasi(){
+
+
+		n_awal = NULL;
+}
+
+
+void tampil_list(){
+
+	while(n_tampil ! = NULL){
+		printf("%d", n_tampil -> data);
+		n_tampil = n_tampil -> next;
+		
+}
+printf("/n");
+}
+
+void buat_circular(){
+
+	n_bantu =n_awal;
+	
+	while(n_bantu ->) next!= NULL){
+		n_bantu = n_bantu->next;
+}
+
+if(n_bantu->next==NULL)
+{
+	n_bantu->next=n_awal;
+	}
+}
+
+void insert_node(int data){
+
+struct SNode *n_insert;
+n_insert=(struct SNode *)malloc(sizeof(struct SNode));;
+n_insert-> data=iterasi;
+n_insert->next =NULL;
+
+if(n_awal==NULL){
+
+
+	n_awal=n_insert;
+	
+}else{
+
+	n_bantu=n_awal;
+	
+	while(n_bantu->next!=NULL){
+	
+		n_bantu=n_bantu->next;
+	}
+	
+	if(n_bantu->next==NULL)
+	{
+	n_bantu->next=n_insert;
+	}
+}
+}
+int mail(int argc,char *argv[])
+{
+	inisialisasi();
+	
+	for(iterasi= 1;iterasi<=5;iterasi++)
+	{	
+		insert_node(iterasi);
+	}
+	
+	tampil_list();
+	
+	buat_circular();
+	
+	system("PAUSE");
+	return 0;
+	}
